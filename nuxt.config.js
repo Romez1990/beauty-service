@@ -15,7 +15,7 @@ export default {
   },
   loading: { color: '#fff' },
   css: [],
-  plugins: [],
+  plugins: ['@/plugins/composition_api'],
   buildModules: ['@nuxtjs/eslint-module'],
   modules: ['@nuxtjs/axios'],
   axios: {},
