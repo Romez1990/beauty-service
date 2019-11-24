@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export default {
   mode: 'universal',
   head: {
@@ -26,4 +30,5 @@ export default {
       }
     },
   },
+  env: process.env,
 };
