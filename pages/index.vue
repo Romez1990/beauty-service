@@ -47,9 +47,9 @@
       </form>
     </main>
     <button>
-      <a href="%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD.html" class="button">
+      <nuxt-link to="/results" class="button">
         Найти
-      </a>
+      </nuxt-link>
     </button>
   </div>
 </template>
