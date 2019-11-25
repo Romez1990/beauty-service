@@ -62,7 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 100vh;
   flex-direction: column;
 }
 
