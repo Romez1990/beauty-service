@@ -1,0 +1,153 @@
+<template>
+  <div id="wrapper">
+    <p id="h1">Добро пожаловать на сайт Beauty-фильтр!</p>
+    <p id="h2">Выберите необходимые параметры:</p>
+    <main>
+      <div id="services">
+        <p>Выберите необходимую услугу</p>
+        <select name="1">
+          <option disabled selected value></option>
+          <optgroup label="Парикмахерские услуги">
+            <option value="ws">Женская стрижка</option>
+            <option value="ms">Мужская стрижка</option>
+            <option value="oh">Окрашивание волос</option>
+            <option value="yv">Укладка волос</option>
+            <option value="kvv">Кератиновое выпрямление волос</option>
+            <option value="nv">Наращивание волос</option>
+          </optgroup>
+          <optgroup label="Услуги ногтевого сервиса">
+            <option value="mn">Маникюр</option>
+            <option value="pd">Педикюр</option>
+            <option value="nn">Наращивание ногтей</option>
+            <option value="pgl">Покрытие гель-лак</option>
+          </optgroup>
+          <optgroup label="Услуги lash-мейкера">
+            <option value="nr">Наращивание ресниц</option>
+            <option value="lr">Ламинирование ресниц</option>
+          </optgroup>
+          <optgroup label="Услуги бровиста">
+            <option value="yb">Укладка бровей</option>
+          </optgroup>
+          <optgroup label="Услуги косметолога">
+            <option value="chl">Чистка лица</option>
+            <option value="kk">Консультация косметолога</option>
+          </optgroup>
+          <optgroup label="Услуги визажиста">
+            <option value="mk">Макияж</option>
+          </optgroup>
+        </select>
+      </div>
+      <form action="1">
+        <p>Выберите удобную дату</p>
+        <input type="date" />
+      </form>
+      <form action="2">
+        <p>Выберите время</p>
+        <input type="time" />
+      </form>
+    </main>
+    <button>
+      <a href="%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD.html" class="button">
+        Найти
+      </a>
+    </button>
+  </div>
+</template>
+
+<style scoped>
+#wrapper {
+  /*background-image: url(res/%D1%84%D0%BE%D0%BD7.jpg);*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+#services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+p {
+  margin: 15px;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  text-shadow: 2px 2px 5px #fff;
+  font-weight: 70;
+}
+
+#h1 {
+  font-family: sans-serif;
+  font-size: 3em;
+  text-shadow: 2px 2px 5px #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#h2 {
+  font-family: sans-serif;
+  font-size: 2em;
+  text-shadow: 2px 2px 5px #fff;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+select {
+  background-color: rgba(237, 157, 114, 0.52);
+  border-radius: 50px;
+  border: 3px inset rgba(222, 92, 22, 0.52);
+}
+
+input {
+  background-color: rgba(237, 157, 114, 0.52);
+  border-radius: 50px;
+  border: 3px inset rgba(222, 92, 22, 0.52);
+}
+
+button {
+  height: 40px;
+  width: 200px;
+  background-color: rgba(229, 105, 39, 0.67);
+  border: 3px inset rgba(137, 68, 32, 0.67);
+  border-radius: 50px;
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+button:hover {
+  box-shadow: rgba(109, 50, 19, 0.67) 0 0px 0px 40px inset;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  max-width: 180px;
+  height: 20px;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-family: sans-serif;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+<script src="./index.js"></script>
