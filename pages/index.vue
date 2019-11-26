@@ -7,33 +7,10 @@
         <p>Выберите необходимую услугу</p>
         <select name="1">
           <option disabled selected value></option>
-          <optgroup label="Парикмахерские услуги">
-            <option value="ws">Женская стрижка</option>
-            <option value="ms">Мужская стрижка</option>
-            <option value="oh">Окрашивание волос</option>
-            <option value="yv">Укладка волос</option>
-            <option value="kvv">Кератиновое выпрямление волос</option>
-            <option value="nv">Наращивание волос</option>
-          </optgroup>
-          <optgroup label="Услуги ногтевого сервиса">
-            <option value="mn">Маникюр</option>
-            <option value="pd">Педикюр</option>
-            <option value="nn">Наращивание ногтей</option>
-            <option value="pgl">Покрытие гель-лак</option>
-          </optgroup>
-          <optgroup label="Услуги lash-мейкера">
-            <option value="nr">Наращивание ресниц</option>
-            <option value="lr">Ламинирование ресниц</option>
-          </optgroup>
-          <optgroup label="Услуги бровиста">
-            <option value="yb">Укладка бровей</option>
-          </optgroup>
-          <optgroup label="Услуги косметолога">
-            <option value="chl">Чистка лица</option>
-            <option value="kk">Консультация косметолога</option>
-          </optgroup>
-          <optgroup label="Услуги визажиста">
-            <option value="mk">Макияж</option>
+          <optgroup v-for="group in groups" :label="group.name">
+            <option v-for="service in group.services" :value="service.id">
+              {{ service.name }}
+            </option>
           </optgroup>
         </select>
       </div>
