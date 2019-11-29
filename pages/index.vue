@@ -5,9 +5,9 @@
     <main>
       <div id="services">
         <p>Выберите необходимую услугу</p>
-        <select name="1">
+        <select v-model="serviceId">
           <option disabled selected value></option>
-          <optgroup v-for="group in groups" :label="group.name">
+          <optgroup v-for="group in serviceGroups" :label="group.name">
             <option v-for="service in group.services" :value="service.id">
               {{ service.name }}
             </option>
@@ -16,26 +16,20 @@
       </div>
       <form action="1">
         <p>Выберите удобную дату</p>
-        <input type="date" />
+        <input v-model="date" type="date" />
       </form>
       <form action="2">
         <p>Выберите время</p>
-        <input type="time" />
+        <input v-model="time" type="time" />
       </form>
     </main>
-    <button>
-      <nuxt-link to="/results" class="button">
-        Найти
-      </nuxt-link>
-    </button>
+    <input @click="find" type="button" value="Найти" />
   </div>
 </template>
 
 <style scoped>
 #wrapper {
-  /*background-image: url(res/%D1%84%D0%BE%D0%BD7.jpg);*/
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background: url(~@/assets/background.jpg) center / cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +60,6 @@ p {
   font-family: sans-serif;
   font-size: 1.1em;
   text-shadow: 2px 2px 5px #fff;
-  font-weight: 70;
 }
 
 #h1 {
@@ -97,7 +90,7 @@ input {
   border: 3px inset rgba(222, 92, 22, 0.52);
 }
 
-button {
+input[type='button'] {
   height: 40px;
   width: 200px;
   background-color: rgba(229, 105, 39, 0.67);

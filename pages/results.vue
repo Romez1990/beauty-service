@@ -4,49 +4,28 @@
     <header>
       <li>
         Услуга
-        <select name="1">
+        <select v-model="serviceId" @change="updateQuery">
           <option disabled selected value></option>
-          <optgroup label="Парикмахерские услуги">
-            <option value="ws"> Женская стрижка</option>
-            <option value="ms">Мужская стрижка</option>
-            <option value="oh">Окрашивание волос</option>
-            <option value="yv">Укладка волос</option>
-            <option value="kvv">Кератиновое выпрямление волос</option>
-            <option value="nv">Наращивание волос</option>
-          </optgroup>
-          <optgroup label="Услуги ногтевого сервиса">
-            <option value="mn">Маникюр</option>
-            <option value="pd">Педикюр</option>
-            <option value="nn">Наращивание ногтей</option>
-            <option value="pgl">Покрытие гель-лак</option>
-          </optgroup>
-          <optgroup label="Услуги lash-мейкера">
-            <option value="nr">Наращивание ресниц</option>
-            <option value="lr">Ламинирование ресниц</option>
-          </optgroup>
-          <optgroup label="Услуги бровиста">
-            <option value="yb">Укладка бровей</option>
-          </optgroup>
-          <optgroup label="Услуги косметолога">
-            <option value="chl">Чистка лица</option>
-            <option value="" kk>Консультация косметолога</option>
-          </optgroup>
-          <optgroup label="Услуги визажиста">
-            <option value="mk">Макияж</option>
+          <optgroup v-for="group in serviceGroups" :label="group.name">
+            <option v-for="service in group.services" :value="service.id">
+              {{ service.name }}
+            </option>
           </optgroup>
         </select>
       </li>
       <li>
         Дата
-        <input type="date" class="qwe" />
+        <input v-model="date" @change="updateQuery" type="date" class="qwe" />
       </li>
-      <li>Время <input type="time" class="qwe" /></li>
+      <li>
+        Время
+        <input v-model="time" @change="updateQuery" type="time" class="qwe" />
+      </li>
     </header>
     <main>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div v-for="saloon in saloons">
+        {{ saloon.address }}
+      </div>
     </main>
   </div>
 </template>
@@ -65,11 +44,11 @@ p {
 }
 
 #wrapper {
-  /*background-image: url(res/%D1%84%D0%BE%D0%BD7.jpg);*/
+  background: url(~@/assets/background.jpg) center / cover;
+  height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
