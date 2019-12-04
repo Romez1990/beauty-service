@@ -23,12 +23,5 @@ export default {
   buildModules: ['@nuxtjs/eslint-module'],
   modules: ['@nuxtjs/axios'],
   axios: {},
-  build: {
-    extend(config, { isClient }) {
-      if (isClient) {
-        config.devtool = '#source-map';
-      }
-    },
-  },
   env: process.env,
 };
