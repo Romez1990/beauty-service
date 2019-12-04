@@ -1,11 +1,11 @@
 <template>
   <div id="appointment-overlay" ref="overlay" @click="back">
-    <form action="">
+    <form @submit.prevent="makeAppointment">
       <p>Введите имя</p>
-      <input type="text" />
+      <input v-model="name" type="text" name="name" required />
       <p>Введите номер телефона</p>
-      <input type="tel" />
-      <input type="button" value="Записаться" />
+      <input v-model="phone" type="tel" name="phone" required />
+      <input type="submit" value="Записаться" />
     </form>
   </div>
 </template>
@@ -42,13 +42,13 @@ p {
   text-shadow: 2px 2px 5px #fff;
 }
 
-input:not([type='button']) {
+input:not([type='submit']) {
   background: rgb(242, 160, 130);
   border-radius: 10px;
   padding: 2px 5px;
 }
 
-input[type='button'] {
+input[type='submit'] {
   margin-top: 15px;
   height: 30px;
   width: 100px;

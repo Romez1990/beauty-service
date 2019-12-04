@@ -37,7 +37,7 @@
             <b>Цена: {{ price.price }}</b>
             <nuxt-link
               :to="{
-                name: 'results-appointment-saloon',
+                name: 'results-saloon-saloon',
                 params: { saloon: price.saloon.id },
                 query: $route.query,
               }"
