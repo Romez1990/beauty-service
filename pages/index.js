@@ -10,7 +10,7 @@ export default {
   },
 
   setup(_, { root }) {
-    const serviceId = ref('');
+    const service = ref('');
 
     function getDate(date) {
       const year = date.getFullYear();
@@ -39,7 +39,7 @@ export default {
     const time = ref(getTime(currentDate));
 
     function find() {
-      if (!serviceId.value) {
+      if (!service.value) {
         alert('Выберите услугу');
         return;
       }
@@ -47,7 +47,7 @@ export default {
       root.$router.push({
         name: 'results',
         query: {
-          serviceId: serviceId.value,
+          service: service.value,
           date: date.value,
           time: time.value,
         },
@@ -55,7 +55,7 @@ export default {
     }
 
     return {
-      serviceId,
+      service,
       date,
       time,
       find,

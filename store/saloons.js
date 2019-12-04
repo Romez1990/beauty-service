@@ -6,7 +6,7 @@ export const actions = {
   async fetch(state, query) {
     const serverUrl = process.env.SERVER_URL;
     const saloons = await this.$axios.$get(
-      `${serverUrl}/api/free-saloons/?service=${query.serviceId}&datetime=${query.date} ${query.time}`,
+      `${serverUrl}/api/free-saloons/?service=${query.service}&datetime=${query.date} ${query.time}`,
     );
     state.commit('setSaloons', saloons);
   },

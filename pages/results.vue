@@ -4,7 +4,7 @@
     <header>
       <li>
         Услуга
-        <select v-model="serviceId" @change="updateQuery">
+        <select v-model="service" @change="updateQuery">
           <option disabled selected value></option>
           <optgroup v-for="group in serviceGroups" :label="group.name">
             <option v-for="service in group.services" :value="service.id">

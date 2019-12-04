@@ -11,7 +11,7 @@ export default {
   },
 
   setup(_, { root }) {
-    const serviceId = ref(root.$route.query.serviceId);
+    const service = ref(root.$route.query.service);
     const date = ref(root.$route.query.date);
     const time = ref(root.$route.query.time);
 
@@ -20,7 +20,7 @@ export default {
 
     function updateQuery() {
       const query = {
-        serviceId: serviceId.value,
+        service: service.value,
         date: date.value,
         time: time.value,
       };
@@ -32,7 +32,7 @@ export default {
     }
 
     return {
-      serviceId,
+      service,
       date,
       time,
       saloons,

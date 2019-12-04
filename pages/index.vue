@@ -5,7 +5,7 @@
     <main>
       <div id="services">
         <p>Выберите необходимую услугу</p>
-        <select v-model="serviceId">
+        <select v-model="service">
           <option disabled selected value></option>
           <optgroup v-for="group in serviceGroups" :label="group.name">
             <option v-for="service in group.services" :value="service.id">
