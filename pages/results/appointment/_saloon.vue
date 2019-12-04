@@ -57,6 +57,7 @@ input[type='button'] {
   border-radius: 50px;
   transition-property: all;
   transition-duration: 1s;
+  cursor: pointer;
 }
 
 input[type='button']:hover {

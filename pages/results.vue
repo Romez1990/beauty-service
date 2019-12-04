@@ -167,6 +167,7 @@ button {
   width: 120px;
   border-radius: 15px;
   border-color: rgba(157, 44, 23, 0.88);
+  cursor: pointer;
 }
 
 .e {
