@@ -35,17 +35,15 @@
           </span>
           <span class="span2">
             <b>Цена: {{ price.price }}</b>
-            <button>
-              <nuxt-link
-                :to="{
-                  name: 'results-appointment-saloon',
-                  params: { saloon: price.saloon.id },
-                  query: $route.query,
-                }"
-              >
-                Записаться
-              </nuxt-link>
-            </button>
+            <nuxt-link
+              :to="{
+                name: 'results-appointment-saloon',
+                params: { saloon: price.saloon.id },
+                query: $route.query,
+              }"
+            >
+              <input type="button" value="Записаться" />
+            </nuxt-link>
           </span>
         </p>
       </div>
@@ -150,18 +148,13 @@ main div:first-child {
   flex-direction: column;
 }
 
-.span2 a {
-  text-decoration: none;
-  color: black;
-}
-
 b {
   font-family: monospace;
   font-size: 2em;
   color: rgba(160, 36, 31, 0.88);
 }
 
-button {
+input[type='button'] {
   background-color: rgba(167, 74, 46, 0.83);
   height: 30px;
   width: 120px;
