@@ -1,25 +1,25 @@
 export const state = () => ({
-  saloons: [],
+  prices: [],
 });
 
 export const actions = {
   async fetch(state, query) {
     const serverUrl = process.env.SERVER_URL;
-    const saloons = await this.$axios.$get(
+    const prices = await this.$axios.$get(
       `${serverUrl}/api/free-saloons/?service=${query.service}&datetime=${query.date} ${query.time}`,
     );
-    state.commit('setSaloons', saloons);
+    state.commit('setPrices', prices);
   },
 };
 
 export const mutations = {
-  setSaloons(state, saloons) {
-    state.saloons = saloons;
+  setPrices(state, prices) {
+    state.prices = prices;
   },
 };
 
 export const getters = {
-  saloons(state) {
-    return state.saloons;
+  prices(state) {
+    return state.prices;
   },
 };

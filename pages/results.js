@@ -16,7 +16,7 @@ export default {
     const time = ref(root.$route.query.time);
 
     root.$store.dispatch('saloons/fetch', root.$route.query);
-    const saloons = computed(() => root.$store.getters['saloons/saloons']);
+    const prices = computed(() => root.$store.getters['saloons/prices']);
 
     function updateQuery() {
       const query = {
@@ -35,7 +35,7 @@ export default {
       service,
       date,
       time,
-      saloons,
+      prices,
       updateQuery,
     };
   },

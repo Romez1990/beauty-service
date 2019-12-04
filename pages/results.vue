@@ -23,18 +23,18 @@
       </li>
     </header>
     <main>
-      <div v-for="saloon in saloons">
+      <div v-for="price in prices">
         <p class="saloon-name">
-          {{ saloon.name }}
+          {{ price.saloon.name }}
         </p>
         <p class="span1">
           <span class="e">
-            Адрес: {{ saloon.address }}
+            Адрес: {{ price.saloon.address }}
             <br />
-            Телефон: {{ saloon.phone }}
+            Телефон: {{ price.saloon.phone }}
           </span>
           <span class="span2">
-            <b>Цена</b>
+            <b>Цена: {{ price.price }}</b>
             <button>Записаться</button>
           </span>
         </p>
