@@ -58,6 +58,7 @@ input[type='button'] {
   transition-property: all;
   transition-duration: 1s;
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 input[type='button']:hover {
