@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <p>Beauty-фильтр</p>
+    <p id="title">Beauty-фильтр</p>
     <header>
       <li>
         Услуга
@@ -24,14 +24,27 @@
     </header>
     <main>
       <div v-for="saloon in saloons">
-        {{ saloon.address }}
+        <p class="saloon-name">
+          {{ saloon.name }}
+        </p>
+        <p class="span1">
+          <span class="e">
+            Адрес: {{ saloon.address }}
+            <br />
+            Телефон: {{ saloon.phone }}
+          </span>
+          <span class="span2">
+            <b>Цена</b>
+            <button>Записаться</button>
+          </span>
+        </p>
       </div>
     </main>
   </div>
 </template>
 
 <style scoped>
-p {
+#title {
   background-color: rgba(240, 248, 255, 0.69);
   text-align: center;
   width: 100%;
@@ -89,19 +102,64 @@ main {
   background-color: rgba(80, 57, 40, 0.83);
   display: flex;
   flex-direction: column;
+  padding: 0 10px;
 }
 
 main div {
   background-color: rgba(255, 227, 206, 0.89);
-  height: 150px;
-  width: 97%;
   margin-bottom: 10px;
-  margin-left: 10px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-div:first-child {
-  margin-top: 5px;
+main div:first-child {
+  margin-top: 10px;
+}
+
+.saloon-name {
+  font-family: monospace;
+  font-size: 1.5em;
+  margin-left: 50px;
+  margin-bottom: 15px;
+}
+
+.span1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.span2 {
+  display: flex;
+  flex-direction: column;
+}
+
+b {
+  font-family: monospace;
+  font-size: 2em;
+  color: rgba(160, 36, 31, 0.88);
+}
+
+button {
+  background-color: rgba(167, 74, 46, 0.83);
+  height: 30px;
+  width: 120px;
+  border-radius: 15px;
+  border-color: rgba(157, 44, 23, 0.88);
+}
+
+.e {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100px;
+  width: 600px;
+  padding-left: 15px;
 }
 </style>
 
