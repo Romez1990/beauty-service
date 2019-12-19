@@ -129,7 +129,7 @@ main div:first-child {
 
 .saloon-name {
   font-family: monospace;
-  font-size: 1.5em;
+  font-size: 3em;
   margin-left: 50px;
   margin-bottom: 15px;
 }
@@ -139,6 +139,7 @@ main div:first-child {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  font-size: 1.5em;
   margin-left: 35px;
   margin-right: 35px;
 }
@@ -146,6 +147,7 @@ main div:first-child {
 .span2 {
   display: flex;
   flex-direction: column;
+  font-size: 0.7em;
 }
 
 b {
