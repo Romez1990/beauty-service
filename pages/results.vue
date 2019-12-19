@@ -66,7 +66,7 @@
 }
 
 #wrapper {
-  background: url(~@/assets/background.jpg) center / cover;
+  background: url(~@/assets/background.jpg) center / cover fixed;
   height: 100vh;
   margin: 0;
   display: flex;
